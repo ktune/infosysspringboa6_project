@@ -1,0 +1,22 @@
+/* Tailwind is used via CDN in the HTML file for simplicity. /
+/ This file is for any custom styles not covered by Tailwind. */
+body {
+font-family: 'Inter', sans-serif;
+background-color: #f7f9f3;
+}
+.container-card {
+background-color: white;
+border-radius: 1rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+padding: 1.5rem;
+}
+.title {
+color: #2e4d41;
+}
+.subtitle {
+color: #6c757d;
+}
+img {
+width: 100%;
+height: auto;
+}
