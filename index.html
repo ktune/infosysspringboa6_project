@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Milestone 1: AirAware Dashboard (Python)</title>
+  <title>Air Quality Dashboard</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Milestone 1: Data Preprocessing & EDA</h1>
-      <p class="subtitle">Visualizing the foundational insights of the air quality dataset (server-side rendering, no JS).</p>
+      <h1>Air Quality Data Dashboard</h1>
+      <p class="subtitle">A visual summary of pollutant data and key metrics.</p>
     </header>
 
     <section class="stats">
@@ -44,24 +44,24 @@
       <h2>2. Exploratory Data Analysis (EDA) Plots</h2>
 
       <div class="plot-card">
-        <h3>Time Series of PM2.5 and PM10</h3>
+        <h3>Time Series of Pollutants</h3>
         <img src="{{ url_for('plot_png', name='time_series') }}" alt="Time Series plot">
-        <p class="hint">This plot shows concentrations over time (sample).</p>
+        <p class="hint">This plot shows concentrations of PM2.5 and PM10 over time.</p>
       </div>
 
       <div class="plot-card">
         <h3>Scatter Plot: PM2.5 vs PM10</h3>
         <img src="{{ url_for('plot_png', name='scatter') }}" alt="Scatter plot">
-        <p class="hint">Confirms positive correlation between PM2.5 and PM10.</p>
+        <p class="hint">This visualizes the relationship between PM2.5 and PM10 concentrations.</p>
       </div>
 
       <div class="plot-card">
         <h3>Distribution of PM2.5</h3>
-        <img src="{{ url_for('plot_png', name='histogram') }}" alt="Histogram">
-        <p class="hint">Shows distribution and high-concentration spikes.</p>
+        <img src="{{ url_for('plot_png', name='histogram') }}" alt="Histogram plot">
+        <p class="hint">This histogram shows the frequency of different PM2.5 concentration levels.</p>
       </div>
-
     </section>
+
   </div>
 </body>
 </html>

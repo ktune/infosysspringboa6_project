@@ -1,76 +1,125 @@
+/* Basic styling for the entire page */
 :root {
-  --bg: #f3f4f6;
+  --bg-color: #f0f4f8;
   --card-bg: #ffffff;
-  --muted: #6b7280;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 body {
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: var(--bg);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
   margin: 0;
-  padding: 24px;
-  color: #111827;
+  padding: 20px;
+  line-height: 1.6;
 }
 
+/* Main container to center content and add a clean background */
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  background: var(--card-bg);
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+/* Header and titles */
+header {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 header h1 {
-  margin: 0 0 8px 0;
-  font-size: 26px;
-  text-align: center;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #1e40af; /* A strong blue color */
 }
 
 .subtitle {
-  margin: 0 0 20px 0;
-  text-align: center;
-  color: var(--muted);
+  color: var(--text-secondary);
+  font-size: 1.1em;
 }
 
+h2 {
+  font-size: 1.8em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #334155;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+/* Statistical summary section */
 .stats .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  padding: 18px;
-  border-radius: 12px;
-  color: #ffffff;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.card.blue { background: #3b82f6; }
-.card.teal { background: #14b8a6; }
-.card.yellow{ background: #f59e0b; }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-.card h3 { margin: 0 0 8px 0; font-size: 18px; }
+.card h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  font-weight: 600;
+}
 
+.card p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: var(--text-secondary);
+}
+
+.card.blue { border-left: 5px solid #3b82f6; }
+.card.teal { border-left: 5px solid #14b8a6; }
+.card.yellow { border-left: 5px solid #eab308; }
+
+/* Plots section */
 .plots {
-  margin-top: 28px;
+  margin-top: 40px;
 }
 
 .plot-card {
-  margin-bottom: 20px;
-  padding: 14px;
-  background: #f9fafb;
-  border-radius: 12px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .plot-card img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  display: block;
-  margin-top: 8px;
+  border-radius: 6px;
+  margin-top: 15px;
+  border: 1px solid var(--border-color);
 }
 
-.hint {
-  color: var(--muted);
-  margin-top: 8px;
+.plot-card h3 {
+  font-size: 1.4em;
+  color: #1e293b;
+}
+
+.plot-card .hint {
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: 10px;
 }
